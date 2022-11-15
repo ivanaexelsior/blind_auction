@@ -1,7 +1,7 @@
 from replit import clear
 from art import logo
 print(logo)
-#HINT: You can call clear() to clear the output in the console.
+
 bids = {}
 bidding_finished = False
 
@@ -16,8 +16,7 @@ def find_higest_bidder(bidding_record):
 
 while not bidding_finished:
   name = input("What's your name?: ")
-  price = int(input("What's your bid?: $"))
-  
+  price = int(input("What's your bid?: $"))  
   bids[name] = price
   should_continue = input("Are there any other bidders? Type 'yes' or 'no'. ").lower()
   if should_continue == "no":
@@ -25,4 +24,3 @@ while not bidding_finished:
     find_higest_bidder(bids)
   elif should_continue == "yes":
     clear()
-
